@@ -7,3 +7,4 @@ setuptools
 fastapi
 uvicorn
 dvc
+psycopg-binary

@@ -15,9 +15,10 @@ class Ingestion:
         with open(config_path, "r") as file:
             return yaml.safe_load(file)
 
-    def load_data(self, target: str) -> Tuple:
+    def load_data(self) -> Tuple:
         train_data_path = self.config['data']['train_path']
         test_data_path = self.config['data']['test_path']
+        target = self.config['data']['target']
         train_data = pd.read_csv(train_data_path)
         test_data = pd.read_csv(test_data_path)
 
